@@ -26,7 +26,7 @@ class App extends Component {
     });
     this.setState({imageList: result.data.results});
     const page_no = result.data.total_pages;
-    console.log(result.data);
+    console.log(result.data,page_no);
   }
   render() {
     return(
@@ -36,6 +36,7 @@ class App extends Component {
         {this.state.imageList.length > 0&&
           <ImageComponent imageList={this.state.imageList} page_no = {this.state.page}/>
         }
+        {/* <NextComponent page_no = {this.state.page}/> */}
 
       </div>
     );
